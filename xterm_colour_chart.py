@@ -168,6 +168,11 @@ a30a31a32a33b33c33d33d32d31d30c30c31c32b32b31b30
 .08.09.10.11.12.13.14.15
 """
 
+only16 = """
+.00.01.02.03.04.05.06.07
+.08.09.10.11.12.13.14.15
+"""
+
 cow_shape_left = """
 +13+14+15+16+17+18+19+20+21+22+23+24         c01   e01
 +12+11+10+09+08+07+06+05+04+03+02+01      b02c02d02e02f02
@@ -233,6 +238,7 @@ charts = {
         'whales': whale_shape,
         'slices': slices,
         'ribbon': ribbon,
+        'only16': only16,
         'clouds': cloud_shape,}}
 
 # global settings
@@ -393,7 +399,6 @@ def parse_chart(chart):
     for n in range(colours):
         if n in found:
             continue
-        error("entry %s not found" % n_to_prt(n))
 
     return oall
 
